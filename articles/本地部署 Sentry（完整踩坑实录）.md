@@ -40,7 +40,9 @@ npm create vite@latest my-react-app -- --template react
 当前版本信息：
 - Docker 版本：29.1.3
 - Docker Compose 版本：5.0.0
+
 [下载 Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
 ---
 ### 1️⃣ 获取 Sentry self-hosted
 ```bash
@@ -275,8 +277,10 @@ http://localhost:9000
 | SMTP | 可全部留空 | 本地测试无需配置 |
 | Allow Registration | ❌ 关闭 | 本地环境建议关闭 |
 | Usage Statistics / Beacon | 随意 | 不影响功能 |
+
 👉 直接下一步即可，不会影响错误监控
 Sentry 自带 SMTP mock，本地测试不影响使用
+
 ---
 ## 七、关闭终端会不会关闭 Sentry
 ### ✅ 使用 -d（后台运行）
