@@ -296,4 +296,9 @@ if (import.meta.env.DEV) {
 
 ---
 
+## git仓库地址
+```
+https://github.com/xiaobaili1992/sentry-project
+```
+
 希望这篇教程对你有所帮助！如有问题，欢迎交流讨论。
