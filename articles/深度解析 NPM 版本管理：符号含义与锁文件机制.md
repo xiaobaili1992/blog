@@ -4,8 +4,11 @@
 ---
 ## 📑 目录
 [一、版本号前的符号是什么意思？](#一-版本号前的符号是什么意思)
+
 [二、package-lock.json 的作用与更新机制](#二-package-lockjson-的作用与更新机制)
+
 [三、没有 `package-lock.json` 时，执行 `npm install` 会更新吗？](#三-没有-package-lockjson-时执行-npm-install-会更新吗)
+
 [四、总结](#四-总结)
 
 ---
