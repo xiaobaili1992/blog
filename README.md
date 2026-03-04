@@ -25,11 +25,18 @@ npm run generate
 
 ## Vercel 发布
 
-### 方式一：控制台导入仓库
+### 1. 先创建vercel账号，建议使用github账号登录
 
-将仓库导入 Vercel，框架选择 Next.js，保持默认构建命令 `next build` 即可发布。
+### 2. 在当前项目的根目录下使用shell命令登录，命令如下：
 
-### 方式二：命令行发布
+```bash
+npx vercel login
+// or
+npm i vercel -g
+vercel login
+```
+
+### 3. 登录成功，执行命令行发布
 
 ```bash
 npm run deploy:vercel

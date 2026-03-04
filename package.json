@@ -2,6 +2,15 @@
   "name": "blog",
   "version": "1.0.0",
   "private": true,
+  "description": "个人博客",
+  "author": "lixiaobai",
+  "homepage": "https://blog-three-coral-28.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lixiaobai/blog.git"
+  },
+  "license": "MIT",
+
   "scripts": {
     "dev": "next dev",
     "build": "next build",
