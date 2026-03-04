@@ -16,3 +16,7 @@ build/
 
 .pagedata.json.lock
 .vscode/
+.next/
+out/
+dist/
+.vercel/
