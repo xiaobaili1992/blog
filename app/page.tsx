@@ -8,8 +8,8 @@ export default async function HomePage() {
     <main className="shell">
       <section className="hero">
         <p className="eyebrow">李小白 BLOG</p>
-        <h1>前端与 AI 实战博客</h1>
-        {/* <p>在 articles 目录新增 Markdown 文件后，执行 npm run generate 即可生成新的网页路由。</p> */}
+        <h1 className="hero-title">前端与 AI 实战博客</h1>
+        <p className="hero-sub">新增 Markdown 到 articles 后，执行 npm run generate 即可自动生成路由页面。</p>
       </section>
       <section className="list">
         {articles.map((article) => (
