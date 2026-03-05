@@ -1,3 +1,9 @@
+---
+title: Trae 技能（Skills）安装与使用全解
+date: 2026-02-02
+author: lixiaobai
+---
+
 >Trae 是一款强大的 AI 编程助手，与 Cursor 类似，能够帮助开发者更高效地编写代码。而 **Skills（技能）** 则是 Trae 的核心扩展机制，可以让 AI 具备更多定制化的能力。本文将详细介绍什么是 Skills，为什么需要使用 Skills，以及四种不同的安装方法，帮助你快速上手并提升开发效率。
 
 ---

@@ -1,3 +1,9 @@
+---
+title: 本地部署 Sentry（完整踩坑实录）
+date: 2026-01-24
+author: lixiaobai
+---
+
 > 📚 本文记录一次真实的 Sentry 接入与本地部署过程，包含 Vite + React 项目接入、本地自托管 Sentry 的完整流程、Docker Compose 启停的所有坑、以及 Kafka/ClickHouse/Snuba/Web unhealthy 的真实问题分析。
 ---
 ## 📋 目录

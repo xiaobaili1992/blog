@@ -39,6 +39,32 @@ function makeExcerpt(content: string): string {
   return plain.length > 140 ? `${plain.slice(0, 140)}...` : plain;
 }
 
+function normalizeFrontmatterDate(data: unknown): string | null {
+  if (!data || typeof data !== "object") return null;
+  const record = data as Record<string, unknown>;
+  const candidates = ["date", "createdAt", "created", "publishDate", "published"];
+  for (const key of candidates) {
+    const v = record[key];
+    if (!v) continue;
+    if (v instanceof Date && !isNaN(v.getTime())) {
+      return v.toISOString();
+    }
+    if (typeof v === "string") {
+      const t = Date.parse(v);
+      if (!isNaN(t)) {
+        return new Date(t).toISOString();
+      }
+    }
+    if (typeof v === "number") {
+      const d = new Date(v);
+      if (!isNaN(d.getTime())) {
+        return d.toISOString();
+      }
+    }
+  }
+  return null;
+}
+
 async function getGitFirstCommitISO(filePath: string): Promise<string | null> {
   try {
     const { stdout } = await execFileAsync(
@@ -83,7 +109,8 @@ export async function getAllArticlesMeta(): Promise<ArticleMeta[]> {
       const source = await fs.readFile(filePath, "utf8");
       const { data, content } = matter(source);
       const title = typeof data.title === "string" ? data.title : slug;
-      const createdAt = await getFileCreationISO(filePath);
+      const fromFrontmatter = normalizeFrontmatterDate(data);
+      const createdAt = fromFrontmatter ?? (await getFileCreationISO(filePath));
 
       return {
         slug,
@@ -103,7 +130,8 @@ export async function getArticleBySlug(slug: string): Promise<ArticleDetail> {
   const source = await fs.readFile(filePath, "utf8");
   const { data, content } = matter(source);
   const title = typeof data.title === "string" ? data.title : slug;
-  const createdAt = await getFileCreationISO(filePath);
+  const fromFrontmatter = normalizeFrontmatterDate(data);
+  const createdAt = fromFrontmatter ?? (await getFileCreationISO(filePath));
 
   return {
     slug,

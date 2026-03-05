@@ -1,5 +1,11 @@
+---
+title: 深度解析 package.json：从入门到精通的顶级指南
+date: 2026-02-04
+author: lixiaobai
+---
+
 >`package.json` 是前端工程化的“身份证”和“说明书”。它不仅是 Node.js 管理依赖的核心配置文件，更是现代前端工程化构建、分发、协作的基石。作为一名前端开发者，你是否曾经对 `peerDependencies` 和 `devDependencies` 的区别感到困惑？是否想知道如何编写一个既支持 CommonJS 又支持 ES Module 的组件库？或者如何配置 `sideEffects` 来优化你的打包体积？
-本文将结合**实战业务项目、CLI脚手架、UI组件库、工具库、请求库**等不同场景，深度梳理 `package.json` 中每一个核心属性的作用与最佳实践。
+>本文将结合**实战业务项目、CLI脚手架、UI组件库、工具库、请求库**等不同场景，深度梳理 `package.json` 中每一个核心属性的作用与最佳实践。
 
 ---
 

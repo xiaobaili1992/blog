@@ -1,3 +1,9 @@
+---
+title: 在 Vite + React 项目中集成 Sentry 完整指南
+date: 2026-01-22
+author: lixiaobai
+---
+
 > 📚 本教程将带你从零开始，一步步完成 Sentry 在 Vite + React 项目中的接入与配置，实现错误监控与源码映射功能。
 ---
 ## 📋 目录
